@@ -13,15 +13,18 @@ Tags:
  * Neu can chinh sua tao file css moi
 ********************************************************************************************************/
 :root {
-  --main-color: #115197;
-  --sub-color: #47c9f3;
+  --main-color: #428bca;
+  --navbar-bg-color: #004c8d;
+  --btn-bg-color: #428bca;
+  --link-color: #169bd5;
   --sub-color2: #b01513;
   --silver: #ccc;
   --silver2: #ddd;
   --grey: #eef1f6;
   --gray: #999;
-  --dark: #000;
-  --border-eee: 1px solid #eee;
+  --dark: #333333;
+  --border-color: #8c8c8c;
+  --border: 1px solid var(--border-color);
   --border-ddd: 1px solid #ddd;
   --border-ccc: 1px solid var(--silver);
   --border-dark: 1px solid var(--dark);
@@ -32,6 +35,7 @@ Tags:
   --fz-8: 0.8rem;
   --fz-10: 1rem;
   --fz-12: 1.2rem;
+  --fz-13: 1.3rem;
   --fz-14: 1.4rem;
   --fz-16: 1.6rem;
   --fz-18: 1.8rem;
@@ -50,7 +54,7 @@ Tags:
   --radius-16: 16px;
   --radius-30: 30px;
   --radius-rounded: 50%;
-  --shadow: 0 2px 16px rgb(28, 76, 186, 8%);
+  --shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.35);
   --shadow-s: 0 8px 19px 1px rgba(7, 48, 61, 0.07);
   --shadow-m: 0 0 28px 2px rgba(0, 0, 0, 0.08);
   --shadow-l: 0 6px 38px 8px rgba(0, 0, 0, 0.09);
@@ -65,32 +69,15 @@ Tags:
   --bg-black-opacity20: rgb(0, 0, 0, 0.2);
   --bg-black-opacity30: rgb(0, 0, 0, 0.3);
   --bg-black-opacity40: rgb(0, 0, 0, 0.4);
-  --bg-black-opacity50: rgb(0, 0, 0, 0.5);
+  --bg-linear-gradient: linear-gradient(-143.3935293693092deg,
+      #81d3f8 21.342834481819963%,
+      #f2f2f2 21.342834481819963%,
+      #e4e4e4 78.91331702702973%,
+      #ffffff 78.91331702702973%);
   --bg-color1: rgb(190 224 248 / 30%);
   --bg-color2: rgb(54 29 131 / 20%);
   --bg-color3: rgb(238 249 248 / 95%);
   --bg-color4: rgb(249 238 238 / 95%);
-}
-
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px var(--bg-black-opacity30);
-  border-radius: 5px;
-  background-color: #f5f5f5;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-  height: 6px;
-  background-color: #f5f5f5;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-  width: 10px;
-  height: 2px;
-  border-radius: 5px;
-  -webkit-box-shadow: inset 0 0 6px var(--bg-black-opacity30);
-  background-color: var(--bg-main-opacity66);
 }
 
 html {
@@ -107,7 +94,7 @@ body {
   overflow-x: hidden;
   font-synthesis: none;
   color: var(--dark);
-  font-family: "Roboto", sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 1.4rem;
   line-height: 24px;
 }
@@ -116,7 +103,7 @@ input,
 select,
 textarea {
   color: var(--dark);
-  font-family: "Roboto", sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 1.4rem;
   line-height: 24px;
 }
@@ -340,9 +327,14 @@ big {
   object-fit: contain;
 }
 
-.text-justify{
+.text-justify {
   text-align: justify;
 }
+
+.border-s-dashed {
+  border-style: dashed;
+}
+
 figure img {
   width: 100%;
   max-width: 100%;
@@ -350,21 +342,93 @@ figure img {
 }
 
 a {
-  color: #0d6efd;
-  text-decoration: none;
+  color: #2c68fa;
   background-color: transparent;
   -webkit-transition: var(--transition-25);
   transition: var(--transition-25);
 }
 
 a:hover {
-  color: var(--main-color);
+  color: var(--link-color);
 }
 
 .btn {
+  font-size: var(--fz-14);
   height: 40px;
-  padding: 8px 14px;
+  padding: 8px 38px;
+  color: white;
   border-radius: var(--radius-4);
   -webkit-transition: var(--transition-25);
   transition: var(--transition-25);
+}
+.btn-main{
+  background-color: var(--btn-bg-color);
+}
+.btn-main:hover{
+  background-color: var(--dark);
+  color: white;
+}
+
+.form-control {
+  padding: 8.5px 10px;
+  font-size: 1.4rem;
+  border-radius: var(--radius-6);
+  border: var(--border);
+}
+.form-check-input{
+  border: var(--border);
+}
+
+.password-addon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 40px;
+  line-height: normal;
+  color: var(--gray);
+  background: transparent;
+  outline: unset !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+.password-addon i{
+  font-size: var(--fz-14);
+}
+.password-addon.show i:before {
+  content: "\f06e";
+}
+
+/* Header */
+.navbar {
+  height: 70px;
+  background-color: var(--navbar-bg-color);
+}
+
+.logo {
+  border-right: 4px dashed white;
+}
+
+.bg-main {
+  background: url(../images/eurowindows_building.png) no-repeat;
+  background-size: 100%;
+  background-position: center;
+  height: calc(100vh - 70px);
+}
+
+/* Login */
+.form-login {
+  width: 585px;
+  height: 100%;
+  background-image: var(--bg-linear-gradient);
+}
+
+.login-wrapper {
+  background: white;
+  max-width: 386px;
+  margin: auto;
+  border-radius: var(--radius-6);
+  padding: 40px 40px 70px;
+  box-shadow: var(--shadow);
 }
