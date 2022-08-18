@@ -352,6 +352,7 @@ a:hover {
   color: var(--link-color);
 }
 
+
 .btn {
   font-size: var(--fz-14);
   height: 40px;
@@ -368,7 +369,9 @@ a:hover {
   background-color: var(--dark);
   color: white;
 }
-
+.btn-rounded{
+  border-radius: var(--radius-30);
+}
 .form-control {
   padding: 8.5px 10px;
   font-size: 1.4rem;
@@ -425,10 +428,51 @@ a:hover {
 }
 
 .login-wrapper {
+  position: relative;
   background: white;
   max-width: 386px;
   margin: auto;
   border-radius: var(--radius-6);
   padding: 40px 40px 70px;
   box-shadow: var(--shadow);
+}
+.login-wrapper.s2{
+  padding: 70px 60px;
+}
+
+
+.form-middle{
+  position: relative;
+
+}
+.btn-back{
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  color: #a8b0be;
+}
+
+.btn-ans:after {
+  content: '';
+  display: block;
+  position: absolute;
+  transition-duration: .15s;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+  z-index: 1;
+  bottom: 0;
+  left: 50%;
+  top: 50%;
+  margin: -13px;
+  width: 26px;
+  height: 26px;
+  background: #202124;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  transition-property: transform, opacity;
+}
+
+.btn-ans:hover:after {
+  transform: scale(1);
+  opacity: .12;
 }
