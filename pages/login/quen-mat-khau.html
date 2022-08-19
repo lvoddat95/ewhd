@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="../../assets/images/favicon/site.webmanifest">
 
-    <title>Eurowindow Holding</title>
+    <title>Quên mật khẩu</title>
 
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/datepicker.min.css">
@@ -46,8 +46,8 @@
                 </div>
 
                 <div class="dropdown">
-                    <a class="dropdown-toggle btn-back" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="dropdown-toggle dropdown-hide-arrow" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="../../assets/images/user_nav.svg" alt="User">
                     </a>
                 </div>
@@ -56,30 +56,28 @@
 
         <main class="bg-main d-flex flex-column justify-content-center ">
 
-            <div class="form-midle">
+            <div class="form-middle">
                 <div class="login-wrapper s2">
-                    <div class="mb-5">
-                        <h4 class="fz-18 fw-bold mb-4">
-                            <a class="btn-back " href=""><i class="fa-solid fa-angle-left""></i></a>
-                            Quên mật khẩu ?</h4>
-                        <p class="" style="line-height: normal;">
-                            Nhập lại số điện thoại đăng ký tài khoản của bạn. Bạn sẽ nhận được một mã OTP để đặt lại mật khẩu
-                        </p>
+                    <div class="mb-4">
+                        <h4 class="fz-24 fw-semibold mb-4">
+                            <a class="btn-back btn-hover" href="dang-nhap.html"><i class="fas fa-angle-left"></i></a>
+                            Quên mật khẩu ?
+                        </h4>
+                        <p class="mb-0" style=" line-height: normal;">Nhập lại số điện thoại đăng ký tài khoản của bạn. Bạn sẽ nhận được một mã OTP để đặt lại mật khẩu</p>
                     </div>
                     <div class="login-content">
                         <div class="mb-5">
-                            <label for="username" class="form-label">Số điện thoại</label>
-                            <input type="number" class="form-control" id="username"
-                                placeholder="">
+                            <label for="phone" class="form-label">Số điện thoại</label>
+                            <input type="number" class="form-control" id="phone" placeholder="">
                         </div>
 
                         <div class="text-center mb-5">
-                            <a href="" class="btn btn-main w-100 btn-rounded fw-bold" type="submit">Tiếp theo</a>
+                            <a href="nhap-otp.html" class="btn btn-main w-100 btn-rounded fw-bold">Tiếp theo</a>
                         </div>
 
-                        <div class="form-check d-flex justify-content-center">
-                                <span class="me-3 text-decoration-none">Quên mật khẩu?</span>
-                                <a class="main-color" href="dang-nhap.html">Quay lại Đăng nhập</a>
+                        <div class="form-bottom d-flex justify-content-center">
+                            <span class="me-3 text-decoration-none">Remembered?</span>
+                            <a class="main-color" href="dang-nhap.html">Back to Sign in</a>
                         </div>
 
                     </div>

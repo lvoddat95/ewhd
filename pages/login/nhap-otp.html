@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="../../assets/images/favicon/site.webmanifest">
 
-    <title>Thay đổi mật khẩu</title>
+    <title>Nhập OTP</title>
 
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/datepicker.min.css">
@@ -60,29 +60,31 @@
                 <div class="login-wrapper s2">
                     <div class="mb-4">
                         <h4 class="fz-24 fw-semibold text-center mb-4">
-                            <a class="btn-back btn-hover" href="nhap-otp.html"><i class="fas fa-angle-left"></i></a>
-                            Đổi mật khẩu
+                            <a class="btn-back btn-hover" href="dang-nhap.html"><i class="fas fa-angle-left"></i></a>
+                            Nhập mã
                         </h4>
-                        <p class=" fz-18 fw-medium mb-2">Tạo mật khẩu mạnh</p>
-                        <p class="mb-0" style=" line-height: normal;">Tạo mật khẩu mới và mạnh mà bạn không dùng cho các trang web
-                            khác </p>
+                        <p class="mb-0" style=" line-height: normal;">Chúng tôi vừa gửi tin nhắn chứa mã OTP đến số điện thoại "0988 844 123".
+                            Vui lòngkiểm tra tin nhắn để lấy mã OTP và nhập vào ô bên dưới</p>
                     </div>
+
                     <div class="login-content">
-                        <div class="mb-2">
-                            <label for="" class="form-label">Tạo mật khẩu mới</label>
-                            <input type="text" class="form-control" id="password" placeholder="">
+                        <div class="mb-5">
+                            <label for="otp" class="form-label">Nhập mã OTP</label>
+                            <input type="number" class="form-control" id="otp" placeholder="">
                         </div>
 
-                        <div class="mb-5">
-                            <label for="" class="form-label">Nhập lại mật khẩu</label>
-                            <input type="text" class="form-control" id="re-password" placeholder="">
+                        <div class="d-flex align-items-center justify-content-center mb-5">
+                            <span id="otp-text">Mã OTP sẽ hết hạn trong</span>
+                            <span id="otp-timer" class="mx-3">60</span>
+                            <a class="main-color" href="javascript:;" onclick="resendOtp();">Gửi lại mã OTP</a>
                         </div>
+
+                        <script>
+                            countdownOtp();
+                        </script>
 
                         <div class="text-center mb-5">
-                            <a 
-                            href="thong-bao.html" 
-                            onclick="" 
-                            class="btn btn-primary w-100 btn-rounded fw-bold border-0">Xác nhận</a>
+                            <a href="reset-mat-khau.html" class="btn btn-main w-100 btn-rounded fw-bold">Tiếp theo</a>
                         </div>
 
                         <div class="form-bottom d-flex justify-content-center">

@@ -26,8 +26,7 @@ $(function () {
 
     // Len dau trang
     $(".go-top").on("click", function () {
-        $("html, body").animate(
-            {
+        $("html, body").animate({
                 scrollTop: 0,
             },
             500
@@ -71,22 +70,23 @@ var fancybox_modal = function (source, closeMethod = "true") {
 
 var AlertMessage = function (source, urlBack) {
     Swal.fire({
-        template: "#alert-message-template",
-        title: "<strong>THÔNG BÁO</strong>",
-        html: $(source).html(),
-        width: 600,
-        backdrop: `rgba(0,0,0,.8)`,
+        // template: "#alert-message-template",
+        title: `<span class="fz-24 fw-semibold">Thông báo!</span>`,
+        html: `<p class="fz-14 mb-0">Bạn đã thay đổi mật khẩu thành công. Chọn xác nhận để quay về trang đăng nhập</p>`,
         position: "center",
         showCancelButton: false,
         showDenyButton: false,
         customClass: {
-            htmlContainer: "entry_content",
-            confirmButton: "btn ci-btn ci-bg-sub-color",
+            htmlContainer: "swal-box",
+            confirmButton: "btn btn-primary border-0",
         },
+        confirmButtonText:'Xác nhận',
         buttonsStyling: false,
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location.href = urlBack;
+            if (urlBack.length > 0) {
+                window.location.href = urlBack;
+            }
         }
     });
 };
@@ -94,10 +94,6 @@ var AlertMessage = function (source, urlBack) {
 var fancybox_new_modal = function (source) {
     parent.jQuery.fancybox.getInstance().close();
     fancybox_modal(source, false);
-};
-
-var show_package_select = function (p_this) {
-    $(".package-select").slideToggle("fast");
 };
 
 var copy_text = function (element) {
@@ -108,3 +104,28 @@ var copy_text = function (element) {
     $(element).text("Đã sao chép");
     $temp.remove();
 };
+
+
+var timer;
+var countdownOtp = function () {
+    var count = 60;
+    $("#otp-timer,#otp-text").show();
+    $("#otp-timer").text(count);
+    timer = setTimeout(update, 1000);
+
+    function update() {
+        if (count > 0) {
+            $("#otp-timer").text(--count);
+            timer = setTimeout(update, 1000);
+        } else {
+            $("#otp-timer,#otp-text").hide();
+            // alert("Done!!!");
+        }
+    }
+}
+
+
+var resendOtp = function () {
+    clearTimeout(timer)
+    countdownOtp();
+}
