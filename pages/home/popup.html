@@ -1,0 +1,395 @@
+<!-- Nộp hồ sơ -->
+<div id="nop-ho-so" class="fancybox-modal fancybox-content-xxl">
+    <div class="fancybox-header">
+        <div class="fancybox-title d-flex align-items-center justify-content-between">
+            <h3 class="fz-18 fw-bold text-white mb-0">Nộp hồ sơ</h3>
+            <span>
+                <a href="" class="text-white fz-34 me-2"><i class="far fa-circle-question"></i></a>
+                <a href="javascript:void(0);" class="text-white fz-34" data-fancybox-close title="Đóng"><i
+                        class="far fa-xmark-large"></i></a>
+            </span>
+        </div>
+    </div>
+    <div class="fancybox-body">
+        <div class="list-button list-button-border mb-4">
+            <a href="" class="btn btn-main">Quay lại</a>
+            <a href="" class="btn btn-main">Ghi lại</a>
+            <a href="" class="btn btn-main">Gửi</a>
+        </div>
+        <div class="mb-4">
+            <div class="tab-form style2">
+                <div class="row flex-wrap-reverse flex-lg-wrap">
+                    <div class="col-lg-5">
+                        <div class="nav" id="nav-tab" role="tablist">
+                            <button class="nav-link active" id="tui-ki-thuat" data-bs-toggle="tab"
+                                data-bs-target="#nav-tui-ki-thuat" type="button" role="tab"
+                                aria-controls="nav-tui-ki-thuat" aria-selected="true">
+                                <span>Túi kĩ thuật</span>
+                            </button>
+                            <button class="nav-link" id="tui-thuong-mai" data-bs-toggle="tab"
+                                data-bs-target="#nav-tui-thuong-mai" type="button" role="tab"
+                                aria-controls="nav-tui-thuong-mai" aria-selected="false">
+                                <span>Túi thương mại</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <div class="table-filter d-flex align-items-center">
+                                <div class="form-group form-search">
+                                    <input type="text" class="form-control" placeholder="Nhập tên hồ sơ cần tìm ">
+                                    <i class="far fa-search"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content style2" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-tui-ki-thuat" role="tabpanel"
+                    aria-labelledby="tui-ki-thuat">
+                    <div class="table-responsive">
+                        <table class="table table-style table-bordered">
+                            <thead class="thead-light text-center">
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Loại hồ sơ</th>
+                                    <th width="25%">Tên hồ sơ</th>
+                                    <th>File đính kèm</th>
+                                    <th>Cập nhập cuối</th>
+                                    <th>Ghi chú</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td>Kinh nghiệm và pháp lý</td>
+                                    <td>Đơn dự thầu <span class="text-danger">(*)</span></td>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="input-list-files"></div>
+                                            <div class="input-file-container">
+                                                <input id="fileupload1" class="input-file" name="files" type="file"
+                                                    multiple="">
+                                                <label for="fileupload1" class="input-file-trigger">
+                                                    <i class="fas fa-upload me-2"></i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">10/08/2022</td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" value="">
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="" class="btn btn-outline-danger btn-sm nowrap"><i
+                                                class="far fa-trash-can me-2"></i>Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2</td>
+                                    <td>Kinh nghiệm và pháp lý</td>
+                                    <td>Tài liệu chứng minh tư cách hợp lệ, năng lực và kinh nghiệm của nhà thầu<span
+                                            class="text-danger">(*)</span></span></td>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="input-list-files"></div>
+                                            <div class="input-file-container">
+                                                <input id="fileupload1" class="input-file" name="files" type="file"
+                                                    multiple="">
+                                                <label for="fileupload1" class="input-file-trigger">
+                                                    <i class="fas fa-upload me-2"></i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">10/08/2022</td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" value="">
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="" class="btn btn-outline-danger btn-sm nowrap"><i
+                                                class="far fa-trash-can me-2"></i>Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">3</td>
+                                    <td>Năng lực và ký thuật</td>
+                                    <td>Đề xuất phương án kỹ thuật<span class="text-danger">(*)</span></td>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="input-list-files"></div>
+                                            <div class="input-file-container">
+                                                <input id="fileupload1" class="input-file" name="files" type="file"
+                                                    multiple="">
+                                                <label for="fileupload1" class="input-file-trigger">
+                                                    <i class="fas fa-upload me-2"></i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">10/08/2022</td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" value="">
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="" class="btn btn-outline-danger btn-sm nowrap"><i
+                                                class="far fa-trash-can me-2"></i>Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">4</td>
+                                    <td>Năng lực và ký thuật</td>
+                                    <td>Đề xuất biện pháp thi công</td>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="input-list-files"></div>
+                                            <div class="input-file-container">
+                                                <input id="fileupload1" class="input-file" name="files" type="file"
+                                                    multiple="">
+                                                <label for="fileupload1" class="input-file-trigger">
+                                                    <i class="fas fa-upload me-2"></i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">10/08/2022</td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" value="">
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="" class="btn btn-outline-danger btn-sm nowrap"><i
+                                                class="far fa-trash-can me-2"></i>Delete</a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+                <div class="tab-pane fade" id="nav-tui-thuong-mai" role="tabpanel" aria-labelledby="tui-thuong-mai">...
+                </div>
+            </div>
+            <i><b>Lưu ý: Tài liệu có (<span class="text-danger">*</span>) là tài liệu bắt buộc phải nộp</b></i>
+        </div>
+    </div>
+</div>
+<!--End - Nộp hồ sơ -->
+
+
+<!-- Danh sách tài liệu-->
+<div id="danh-sach-tai-lieu" class="fancybox-modal fancybox-content-xxl">
+    <div class="fancybox-header">
+        <div class="fancybox-title d-flex align-items-center justify-content-between">
+            <h3 class="fz-18 fw-bold text-white mb-0">Danh sách tài liệu đính kèm (Tài liệu mẫu)</h3>
+            <span>
+                <a href="" class="text-white fz-34 me-2"><i class="far fa-circle-question"></i></a>
+                <a href="javascript:void(0);" class="text-white fz-34" data-fancybox-close title="Đóng"><i
+                        class="far fa-xmark-large"></i></a>
+            </span>
+        </div>
+    </div>
+    <div class="fancybox-body">
+        <div class="list-button list-button-border mb-4">
+            <a href="" class="btn btn-main">Quay lại</a>
+        </div>
+        <div class="mb-4">
+
+            <div class="d-flex align-items-center justify-content-end">
+                <div class="table-filter d-flex align-items-center">
+                    <div class="form-group form-search">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm theo tên hồ sơ ">
+                        <i class="far fa-search"></i>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-style table-bordered">
+                <thead class="thead-light text-center">
+                    <tr>
+                        <th width="5%">STT</th>
+                        <th>Tên hồ sơ</th>
+                        <th width="15%">Kích thước tệp</th>
+                        <th width="15%">Định dạng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center">1</td>
+                        <td>Quyết định phê duyệt</td>
+                        <td class="text-center"></td>
+                        <td class="text-center">
+                            <a href="javascript:;" class="main-color">
+                                <img class="img-fluid me-3" src="../../assets/images/file.svg" width="43px"
+                                    height="50px" alt="File">
+                                <span>Tải xuống</span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-center">1</td>
+                        <td>Chương 1</td>
+                        <td class="text-center"></td>
+                        <td class="text-center">
+                            <a href="javascript:;" class="main-color">
+                                <img class="img-fluid me-3" src="../../assets/images/file-excel.svg" width="43px"
+                                    height="50px" alt="File">
+                                <span>Tải xuống</span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-center">1</td>
+                        <td>Chương 2</td>
+                        <td class="text-center"></td>
+                        <td class="text-center">
+                            <a href="javascript:;" class="main-color">
+                                <img class="img-fluid me-3" src="../../assets/images/file-word.svg" width="43px"
+                                    height="50px" alt="File">
+                                <span>Tải xuống</span>
+                            </a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!--End - Danh sách tài liệu -->
+
+
+<!-- Thay đổi mật khẩu -->
+<div id="thay-doi-mat-khau" class="fancybox-modal fancybox-content-md">
+    <div class="fancybox-header">
+        <div class="fancybox-title d-flex align-items-center justify-content-between">
+            <h3 class="fz-18 fw-bold text-white mb-0">Thay đổi mật khẩu</h3>
+            <span>
+                <a href="javascript:void(0);" class="text-white fz-34" data-fancybox-close title="Đóng"><i
+                        class="far fa-xmark-large"></i></a>
+            </span>
+        </div>
+    </div>
+    <div class="fancybox-body">
+        <div class="mb-2">
+            <label for="" class="form-label">Mật khẩu cũ (<span class="text-danger">*</span>)</label>
+            <div class="position-relative">
+                <input type="password" class="form-control pe-5" placeholder="············" id="">
+                <button onclick="show_password(this);" class="password-addon" type="button" id=""><i
+                        class="fa fa-eye-slash align-middle"></i></button>
+            </div>
+        </div>
+
+        <div class="mb-2">
+            <label for="" class="form-label">Mật khẩu mới (<span class="text-danger">*</span>)</label>
+            <div class="position-relative">
+                <input type="password" class="form-control pe-5" placeholder="············" id="">
+                <button onclick="show_password(this);" class="password-addon" type="button" id=""><i
+                        class="fa fa-eye-slash align-middle"></i></button>
+            </div>
+        </div>
+
+        <div class="mb-5">
+            <label for="" class="form-label">Nhập lại mật khẩu (<span class="text-danger">*</span>)</label>
+            <div class="position-relative">
+                <input type="password" class="form-control pe-5" placeholder="············" id="">
+                <button onclick="show_password(this);" class="password-addon" type="button" id=""><i
+                        class="fa fa-eye-slash align-middle"></i></button>
+            </div>
+        </div>
+
+        <div class="text-end">
+            <a href="thong-bao.html" onclick="" class="btn btn-main">Xác nhận</a>
+        </div>
+    </div>
+</div>
+<!--End - Thay đổi mật khẩu -->
+
+
+
+<!-- Thay đổi ảnh đại diện -->
+<div id="thay-doi-anh-dai-dien" class="fancybox-modal fancybox-content-md">
+    <div class="fancybox-header">
+        <div class="fancybox-title d-flex align-items-center justify-content-between">
+            <h3 class="fz-18 fw-bold text-white mb-0">Thay đổi ảnh đại diện</h3>
+            <span>
+                <a href="javascript:void(0);" class="text-white fz-34" data-fancybox-close title="Đóng"><i
+                        class="far fa-xmark-large"></i></a>
+            </span>
+        </div>
+    </div>
+    <div class="fancybox-body">
+
+        <div class="avatar-upload text-center">
+            <div class="input-file-container">
+                <input id="avatar" class="input-file" name="files" type="file">
+                <label for="avatar" class="input-file-avatar">
+                    <img class="img" height="169px" width="169px" src="../../assets/images/avatar.svg" alt="Avatar">
+                </label>
+            </div>
+            <div class="my-2">
+                <a href="" class="text-decoration-none">Xoá ảnh đại diện</a>
+            </div>
+            <p class="fz-32 fw-bold">Kéo ảnh đến màn hình này</p>
+            <p class="fz-24 fw-bold">- Hoặc -</p>
+            <a href="thong-bao.html" onclick="" class="btn btn-main">Tải lên từ máy tính</a>
+
+        </div>
+
+    </div>
+</div>
+<!--End - Thay đổi ảnh đại diện -->
+
+
+<!-- Xem lịch sử -->
+<div id="xem-lich-su" class="fancybox-modal fancybox-content-lg">
+    <div class="fancybox-header">
+        <div class="fancybox-title d-flex align-items-center justify-content-between">
+            <h3 class="fz-18 fw-bold text-white mb-0">Xem lịch sử</h3>
+            <span>
+                <a href="" class="text-white fz-34 me-2"><i class="far fa-circle-question"></i></a>
+                <a href="javascript:void(0);" class="text-white fz-34" data-fancybox-close title="Đóng"><i
+                        class="far fa-xmark-large"></i></a>
+            </span>
+        </div>
+    </div>
+    <div class="fancybox-body">
+        <div class="list-button list-button-border mb-4">
+            <a href="" class="btn btn-main">Quay lại</a>
+        </div>
+        <div class="comment">
+            <div class="line customer">
+                <h3>19/08/2022 12h00</h3>
+                <p class="fz-14">Gửi hồ sơ</p>
+            </div>
+            <div class="line staff">
+                <h3>20/08/2022 11h00</h3>
+                <p class="fz-14">Bộ phần tiếp nhận đã tiếp nhận hồ sơ đang tiến hành kiểm tra</p>
+            </div>
+            <div class="line staff">
+                <h3>20/08/2022 16h00</h3>
+                <p class="fz-14">Bộ phần tiếp nhận không duyệt hồ sơ <br> Lý do hồ sơ bị thiếu</p>
+            </div>
+            <div class="line customer">
+                <h3>20/08/2022 12h00</h3>
+                <p class="fz-14">Gửi hồ sơ</p>
+            </div>
+            <div class="line staff">
+                <h3>20/08/2022 11h00</h3>
+                <p class="fz-14">Bộ phần tiếp nhận đã tiếp nhận hồ sơ đang tiến hành kiểm tra</p>
+            </div>
+            <div class="line staff">
+                <h3>20/08/2022 16h00</h3>
+                <p class="fz-14">Bộ phần tiếp nhận đã duyệt hồ sơ</p>
+            </div>
+            <div class="vertical"></div>
+        </div>
+
+    </div>
+</div>
+<!--End - Xem lịch sử -->

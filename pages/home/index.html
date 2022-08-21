@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/images/favicon/site.webmanifest">
+
+    <title>Trang chủ</title>
+
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/datepicker.min.css">
+    <link rel="stylesheet" href="../../assets/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../../assets/css/select2.min.css">
+    <link rel="stylesheet" href="../../assets/css/sweetalert2.min.css">
+    <link rel="stylesheet" href="../../assets/css/hc-offcanvas-nav.css">
+    <link rel="stylesheet" href="../../assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../../assets/css/flipclock.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/jquery.fancybox.min.js"></script>
+    <script src="../../assets/js/datepicker.min.js"></script>
+    <script src="../../assets/js/datepicker-vi.js"></script>
+    <script src="../../assets/js/cleave.min.js"></script>
+    <script src="../../assets/js/cleave-phone.vn.js"></script>
+    <script src="../../assets/js/select2.min.js"></script>
+    <script src="../../assets/js/sweetalert2.min.js"></script>
+    <script src="../../assets/js/hc-offcanvas-nav.js"></script>
+    <script src="../../assets/js/moment.min.js"></script>
+    <script src="../../assets/js/moment-timezone.min.js"></script>
+    <script src="../../assets/js/flipclock.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    <script src="../../assets/js/script.js"></script>
+
+</head>
+
+<body>
+    <div class="content">
+        <nav class="navbar">
+            <div class="container-fluid px-5">
+                <div class="logo pe-5">
+                    <a class="navbar-brand" href="../home/index.html">
+                        <img class="img" height="58" width="167" src="../../assets/images/logo.png" alt="Logo">
+                    </a>
+                </div>
+
+                <div class="dropdown">
+                    <a class="dropdown-toggle dropdown-hide-arrow" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="../../assets/images/user_nav.svg" alt="User">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                        <li>
+                            <a class="dropdown-item" href="javascript:;"
+                            onclick="fancybox_modal('#thay-doi-anh-dai-dien')"><i class="far fa-image me-2"></i>Thay ảnh đại diện</a>
+                        </li>
+                        <li><a class="dropdown-item" href="javascript:;"
+                                onclick="fancybox_modal('#thay-doi-mat-khau')"><i class="far fa-rotate me-2"></i>Thay
+                                đổi mật khẩu</a></li>
+                        <li><a class="dropdown-item" href="../login/dang-nhap.html"><i
+                                    class="far fa-power-off me-2"></i>Thoát</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="home">
+
+            <section class="block header-block">
+                <div class="header-block-top">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="header-top-left">
+                                    <h2>HỆ THỐNG</h2>
+                                    <p>Thông báo mời thầu - Dự thầu</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="header-top-right">
+                                    <div class="text-center text-lg-start">
+                                        <img class="img-fluid" src="../../assets/images/steps.png" alt="Các bước">
+                                        <ul
+                                            class="list-step list-unstyled d-flex align-items-center justify-content-between mx-auto mx-lg-0">
+                                            <li>Đăng nhập</li>
+                                            <li>Lựa chọn gói thầu</li>
+                                            <li>Nộp hồ sơ</li>
+                                            <li>Theo dõi kết quả</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="header-block-bottom">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="header-bottom-filter d-flex flex-column justify-content-center h-100">
+                                    <div class="d-flex flex-column">
+                                        <div class="btn-filter">
+                                            <a class="btn btn-main btn-transparent text-uppercase" href="">Bộ lọc tìm
+                                                kiếm</a>
+                                        </div>
+
+                                        <div class="form-group mb-3">
+                                            <select name="" id="" class="form-control">
+                                                <option value="">Chọn dự án</option>
+                                                <option value="">Dự án 1</option>
+                                                <option value="">Dự án 2</option>
+                                                <option value="">Dự án 3</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group mb-3">
+                                            <select name="" id="" class="form-control" onchange="showDateRange(this)">
+                                                <option value="">Chọn thời gian</option>
+                                                <option value="1">Một tuần gần nhất</option>
+                                                <option value="2">Một tháng gần nhất</option>
+                                                <option value="3">Sáu tháng gần nhất</option>
+                                                <option value="4">Một năm gần nhất</option>
+                                                <option value="5">Hai năm gần nhất</option>
+                                                <option value="6">Tuỳ chọn</option>
+                                            </select>
+                                        </div>
+
+                                        <div id="date-range" class="date-range mx-auto" style="display: none;">
+                                            <div class="form-group">
+                                                <label for="fromdate">Từ</label>
+                                                <input id="fromdate" type="text"
+                                                    class="form-control input-date datepicker" placeholder="">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="todate">Đến</label>
+                                                <input id="todate" type="text"
+                                                    class="form-control input-date datepicker" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="header-bottom-services">
+                                    <ul
+                                        class="list-unstyled d-flex align-items-center justify-content-between text-center">
+                                        <li>
+                                            <img class="img-fluid" width="100px" src="../../assets/images/tu_van.png"
+                                                alt="Tư vấn">
+                                            <h3 class="fz-28 text-orange fw-bold mb-2">20 gói</h3>
+                                            <p class="fz-18 text-white fw-bold mb-0 ">Tư vấn</p>
+                                        </li>
+                                        <li>
+                                            <img class="img-fluid" width="100px" src="../../assets/images/xay_lap.png"
+                                                alt="Xây lắp">
+                                            <h3 class="fz-28 text-orange fw-bold mb-2">20 gói</h3>
+                                            <p class="fz-18 text-white fw-bold mb-0 ">Xây lắp</p>
+                                        </li>
+                                        <li>
+                                            <img class="img-fluid" width="100px" src="../../assets/images/hang_hoa.png"
+                                                alt="Hàng hoá">
+                                            <h3 class="fz-28 text-orange fw-bold mb-2">20 gói</h3>
+                                            <p class="fz-18 text-white fw-bold mb-0 ">Hàng hoá</p>
+                                        </li>
+                                        <li>
+                                            <img class="img-fluid" width="100px" src="../../assets/images/hon_hop.png"
+                                                alt="Hỗn hợp">
+                                            <h3 class="fz-28 text-orange fw-bold mb-2">20 gói</h3>
+                                            <p class="fz-18 text-white fw-bold mb-0 ">Hỗn hợp</p>
+                                        </li>
+                                        <li>
+                                            <img class="img-fluid" width="100px" src="../../assets/images/khac.png"
+                                                alt="Khác">
+                                            <h3 class="fz-28 text-orange fw-bold mb-2">20 gói</h3>
+                                            <p class="fz-18 text-white fw-bold mb-0 ">Khác</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block content-block">
+                <div class="container-fluid">
+                    <h2 class="table-title fz-18 fw-bold text-uppercase my-3">DANH SÁCH GÓI THẦU ĐƯỢC MỜI THAM DỰ</h2>
+
+                    <div class="tab-form ">
+                        <div class="row flex-wrap-reverse flex-lg-wrap">
+                            <div class="col-lg-5">
+                                <div class="nav" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="co-tham-gia" data-bs-toggle="tab"
+                                        data-bs-target="#nav-tham-gia" type="button" role="tab"
+                                        aria-controls="nav-tham-gia" aria-selected="true">
+                                        <span>Có tham gia</span>
+                                    </button>
+                                    <button class="nav-link" id="khong-tham-gia" data-bs-toggle="tab"
+                                        data-bs-target="#nav-khong-tham-gia" type="button" role="tab"
+                                        aria-controls="nav-khong-tham-gia" aria-selected="false">
+                                        <span>Không tham gia</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="d-flex align-items-center justify-content-end">
+                                    <div class="table-filter d-flex align-items-center">
+                                        <div class="form-group me-2">
+                                            <label for="status">Trạng thái</label>
+                                            <select name="" id="" class="form-control">
+                                                <option value="">Tất cả</option>
+                                                <option value="1">Hồ sơ mới tạo</option>
+                                                <option value="2">Hồ sơ đã được tiếp nhận chờ xử lý</option>
+                                                <option value="3">Hồ sơ đã được chuyển bộ phần chuyên môn</option>
+                                                <option value="4">Hồ sơ đã chấm thầu - trượt</option>
+                                                <option value="5">Hồ sơ đã chấm thầu - trúng</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group form-search">
+                                            <input type="text" class="form-control"
+                                                placeholder="Tìm kiếm theo tên gói thầu">
+                                            <i class="far fa-search"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-tham-gia" role="tabpanel"
+                            aria-labelledby="co-tham-gia">
+
+                            <div class="table-responsive mb-5">
+                                <table class="table table-data">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 10px;vertical-align: middle;">
+                                                <span class="fz-32 fw-bold">1</span>
+                                            </td>
+                                            <td class="cell-act" width="150px">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <div class="mb-3">
+                                                            <a href="javascript:;"
+                                                                onclick="fancybox_modal('#nop-ho-so')"
+                                                                class="btn btn-nophoso">Nộp hồ sơ</a>
+                                                        </div>
+                                                        <img class="img-fluid" src="../../assets/images/flipclock.png"
+                                                            width="140px" alt="">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="cell-status" width="150px">
+                                                <ul class="list-status list-unstyled">
+                                                    <li class="d-flex align-items-center">
+                                                        <span
+                                                            class="fz-16 text-uppercase fw-bold text-blue nowrap me-5">Trạng
+                                                            thái:</span>
+                                                        <span class="badge text-mt fz-14">MT</span>
+                                                    </li>
+                                                    <li><a href="" class="main-color">Tải hồ sơ</a></li>
+                                                    <li><a href="javascript:;"
+                                                        onclick="fancybox_modal('#xem-lich-su')" class="main-color">Xem lịch sử</a></li>
+                                                </ul>
+                                            </td>
+                                            <td class="cell-datetime">
+                                                <div class="d-flex">
+                                                    <div class="tb-datetime tb-form-date me-2">
+                                                        <p class="tb-header">Ngày mời thầu</p>
+                                                        <div class="tb-info">
+                                                            <span class="tb-date fz-20">04/07/2022</span>
+                                                            <span class="tb-time">13h20</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tb-datetime tb-to-date">
+                                                        <p class="tb-header">Ngày đóng thầu</p>
+                                                        <div class="tb-info">
+                                                            <span class="tb-date fz-20">17/07/2022</span>
+                                                            <span class="tb-time">13h20</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="cell-info" width="">
+                                                <ul class="list-status list-unstyled">
+                                                    <li>
+                                                        <span class="fz-16 text-uppercase fw-bold text-blue nowrap">
+                                                            Gói thầu:
+                                                        </span>
+                                                        <span class="tb-sub">
+                                                            Tư vấn thiết kế xây dựng công trình, báo cáo đánh gía
+                                                        </span>
+                                                    </li>
+                                                    <li><b>Địa điểm:</b> Toà nhà 123, ABC Láng Hạ, Đống Đa, Hà Nội</li>
+                                                    <li><b>Thời gian nhận từ ngày:</b> 20/04/2022 đến ngày 30/02/2022
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                            <td class="cell-info-more" width="">
+                                                <ul class="list-status list-unstyled">
+                                                    <li><b>Số thông báo mời thầu:</b> ABC123XZ 678</li>
+                                                    <li><b>Lĩnh vực:</b> Cung cấp nội thất và các thiết bị văn phòng
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                            <td class="cell-docs text-center" width="150px"
+                                                style="vertical-align: middle;">
+                                                <a href="javascript:;" onclick="fancybox_modal('#danh-sach-tai-lieu')"
+                                                    class="main-color">
+                                                    <img class="img-fluid d-block mb-2 mx-auto"
+                                                        src="../../assets/images/file.svg" width="43px" height="50px"
+                                                        alt="File">
+                                                    <span>Tải biểu mẫu</span>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td style="width: 10px;vertical-align: middle;">
+                                                <span class="fz-32 fw-bold">2</span>
+                                            </td>
+                                            <td class="cell-act" width="150px">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <div class="mb-3">
+                                                            <a href="javascript:;"
+                                                                onclick="AlertMessage('Cảnh báo!', 'Gói thầu đã được nộp thành công, bạn không thể tiếp tục nộp hồ sơ Bạn chỉ có thể nộp hồ sơ khi ở trạng thái <b>Mới tạo</b>')"
+                                                                class="btn btn-nophoso">Nộp hồ sơ</a>
+                                                        </div>
+                                                        <img class="img-fluid" src="../../assets/images/flipclock.png"
+                                                            width="140px" alt="">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="cell-status" width="150px">
+                                                <ul class="list-status list-unstyled">
+                                                    <li class="d-flex align-items-center">
+                                                        <span
+                                                            class="fz-16 text-uppercase fw-bold text-blue nowrap me-5">Trạng
+                                                            thái:</span>
+                                                        <span class="badge text-notok fz-14">NOT OK</span>
+                                                    </li>
+                                                    <li><a href="" class="main-color">Tải hồ sơ</a></li>
+                                                    <li><a  href="javascript:;"
+                                                        onclick="fancybox_modal('#xem-lich-su')" class="main-color">Xem lịch sử</a></li>
+                                                </ul>
+                                            </td>
+                                            <td class="cell-datetime">
+                                                <div class="d-flex">
+                                                    <div class="tb-datetime tb-form-date me-2">
+                                                        <p class="tb-header">Ngày mời thầu</p>
+                                                        <div class="tb-info">
+                                                            <span class="tb-date fz-20">04/07/2022</span>
+                                                            <span class="tb-time">13h20</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tb-datetime tb-to-date">
+                                                        <p class="tb-header">Ngày đóng thầu</p>
+                                                        <div class="tb-info">
+                                                            <span class="tb-date fz-20">17/07/2022</span>
+                                                            <span class="tb-time">13h20</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="cell-info" width="">
+                                                <ul class="list-status list-unstyled">
+                                                    <li>
+                                                        <span class="fz-16 text-uppercase fw-bold text-blue nowrap">
+                                                            Gói thầu:
+                                                        </span>
+                                                        <span class="tb-sub">
+                                                            Tư vấn thiết kế xây dựng công trình, báo cáo đánh gía
+                                                        </span>
+                                                    </li>
+                                                    <li><b>Địa điểm:</b> Toà nhà 123, ABC Láng Hạ, Đống Đa, Hà Nội</li>
+                                                    <li><b>Thời gian nhận từ ngày:</b> 20/04/2022 đến ngày 30/02/2022
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                            <td class="cell-info-more" width="">
+                                                <ul class="list-status list-unstyled">
+                                                    <li><b>Số thông báo mời thầu:</b> ABC123XZ 678</li>
+                                                    <li><b>Lĩnh vực:</b> Cung cấp nội thất và các thiết bị văn phòng
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                            <td class="cell-docs text-center" width="150px"
+                                                style="vertical-align: middle;">
+                                                <a href="javascript:;" onclick="fancybox_modal('#danh-sach-tai-lieu')"
+                                                    class="main-color">
+                                                    <img class="img-fluid d-block mb-2 mx-auto"
+                                                        src="../../assets/images/file.svg" width="43px" height="50px"
+                                                        alt="File">
+                                                    <span>Tải biểu mẫu</span>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td style="width: 10px;vertical-align: middle;">
+                                                <span class="fz-32 fw-bold">3</span>
+                                            </td>
+                                            <td class="cell-act" width="150px">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <div class="mb-3">
+                                                            <a href="javascript:;"
+                                                                onclick="AlertMessage('Cảnh báo!', 'Gói thầu đã được nộp thành công, bạn không thể tiếp tục nộp hồ sơ Bạn chỉ có thể nộp hồ sơ khi ở trạng thái <b>Mới tạo</b>')"
+                                                                class="btn btn-nophoso">Nộp hồ sơ</a>
+                                                        </div>
+                                                        <img class="img-fluid" src="../../assets/images/flipclock.png"
+                                                            width="140px" alt="">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="cell-status" width="150px">
+                                                <ul class="list-status list-unstyled">
+                                                    <li class="d-flex align-items-center">
+                                                        <span
+                                                            class="fz-16 text-uppercase fw-bold text-blue nowrap me-5">Trạng
+                                                            thái:</span>
+                                                        <span class="badge text-ok fz-14">OK</span>
+                                                    </li>
+                                                    <li><a href="" class="main-color">Tải hồ sơ</a></li>
+                                                    <li><a href="javascript:;"
+                                                        onclick="fancybox_modal('#xem-lich-su')" class="main-color">Xem lịch sử</a></li>
+                                                </ul>
+                                            </td>
+                                            <td class="cell-datetime">
+                                                <div class="d-flex">
+                                                    <div class="tb-datetime tb-form-date me-2">
+                                                        <p class="tb-header">Ngày mời thầu</p>
+                                                        <div class="tb-info">
+                                                            <span class="tb-date fz-20">04/07/2022</span>
+                                                            <span class="tb-time">13h20</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tb-datetime tb-to-date">
+                                                        <p class="tb-header">Ngày đóng thầu</p>
+                                                        <div class="tb-info">
+                                                            <span class="tb-date fz-20">17/07/2022</span>
+                                                            <span class="tb-time">13h20</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="cell-info" width="">
+                                                <ul class="list-status list-unstyled">
+                                                    <li>
+                                                        <span class="fz-16 text-uppercase fw-bold text-blue nowrap">
+                                                            Gói thầu:
+                                                        </span>
+                                                        <span class="tb-sub">
+                                                            Tư vấn thiết kế xây dựng công trình, báo cáo đánh gía
+                                                        </span>
+                                                    </li>
+                                                    <li><b>Địa điểm:</b> Toà nhà 123, ABC Láng Hạ, Đống Đa, Hà Nội</li>
+                                                    <li><b>Thời gian nhận từ ngày:</b> 20/04/2022 đến ngày 30/02/2022
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                            <td class="cell-info-more" width="">
+                                                <ul class="list-status list-unstyled">
+                                                    <li><b>Số thông báo mời thầu:</b> ABC123XZ 678</li>
+                                                    <li><b>Lĩnh vực:</b> Cung cấp nội thất và các thiết bị văn phòng
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                            <td class="cell-docs text-center" width="150px"
+                                                style="vertical-align: middle;">
+                                                <a href="javascript:;" onclick="fancybox_modal('#danh-sach-tai-lieu')"
+                                                    class="main-color">
+                                                    <img class="img-fluid d-block mb-2 mx-auto"
+                                                        src="../../assets/images/file.svg" width="43px" height="50px"
+                                                        alt="File">
+                                                    <span>Tải biểu mẫu</span>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+
+
+
+
+
+                                    </tbody>
+                                </table>
+                                <nav class="d-flex justify-content-end">
+                                    <ul class="pagination">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i
+                                                    class="fa-solid fa-caret-left"></i></a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item active" aria-current="page">
+                                            <a class="page-link" href="#">2</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">...</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">20</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#"><i class="fa-solid fa-caret-right"></i></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="nav-khong-tham-gia" role="tabpanel"
+                            aria-labelledby="khong-tham-gia">...</div>
+                    </div>
+                </div>
+
+
+                <div class="data-note">
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <p class="fz-16 text-uppercase fw-bold my-2"><i>Ghi chú:</i></p>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <table class="table table-borderless mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td with="" class="fw-bold text-mt">MT</td>
+                                                <td with="">Hồ sơ mới tạo</td>
+                                            </tr>
+                                            <tr>
+                                                <td with="" class="fw-bold text-cxl">CXL</td>
+                                                <td with="">Hồ sơ đã nộp chờ bộ phận tiếp nhận kiểm tra</td>
+                                            </tr>
+                                            <tr>
+                                                <td with="" class="fw-bold text-dxl">ĐXL</td>
+                                                <td with="">Hồ sơ đã được chuyển các bộ phận chuyên môn</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-lg-6">
+                                    <table class="table table-borderless mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td with="" class="fw-bold text-ok">OK</td>
+                                                <td with="">Hồ sơ đã chấm - trúng thầu</td>
+                                            </tr>
+                                            <tr>
+                                                <td with="" class="fw-bold text-notok">NOT OK</td>
+                                                <td with="">Hồ sơ đã chấm - trượt thầu</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+
+
+        <div include-html="popup.html"></div>
+        <div include-html="alert.html"></div>
+
+        <script>
+            includeHTML();
+        </script>
+
+    </div>
+
+</body>
+
+</html>

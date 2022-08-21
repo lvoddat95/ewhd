@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/images/favicon/site.webmanifest">
+
+    <title>Phê duyệt hồ sơ</title>
+
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/datepicker.min.css">
+    <link rel="stylesheet" href="../../assets/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../../assets/css/select2.min.css">
+    <link rel="stylesheet" href="../../assets/css/sweetalert2.min.css">
+    <link rel="stylesheet" href="../../assets/css/hc-offcanvas-nav.css">
+    <link rel="stylesheet" href="../../assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../../assets/css/flipclock.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/jquery.fancybox.min.js"></script>
+    <script src="../../assets/js/datepicker.min.js"></script>
+    <script src="../../assets/js/datepicker-vi.js"></script>
+    <script src="../../assets/js/cleave.min.js"></script>
+    <script src="../../assets/js/cleave-phone.vn.js"></script>
+    <script src="../../assets/js/select2.min.js"></script>
+    <script src="../../assets/js/sweetalert2.min.js"></script>
+    <script src="../../assets/js/hc-offcanvas-nav.js"></script>
+    <script src="../../assets/js/moment.min.js"></script>
+    <script src="../../assets/js/moment-timezone.min.js"></script>
+    <script src="../../assets/js/flipclock.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    <script src="../../assets/js/script.js"></script>
+
+</head>
+
+<body>
+    <div class="content">
+        <nav class="navbar">
+            <div class="container-fluid px-5">
+                <div class="logo pe-5">
+                    <a class="navbar-brand" href="../home/index.html">
+                        <img class="img" height="58" width="167" src="../../assets/images/logo.png" alt="Logo">
+                    </a>
+                </div>
+
+                <div class="dropdown">
+                    <a class="dropdown-toggle dropdown-hide-arrow" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="../../assets/images/user_nav.svg" alt="User">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                        <li>
+                            <a class="dropdown-item" href="javascript:;"
+                                onclick="fancybox_modal('#thay-doi-anh-dai-dien')"><i class="far fa-image me-2"></i>Thay
+                                ảnh đại diện</a>
+                        </li>
+                        <li><a class="dropdown-item" href="javascript:;"
+                                onclick="fancybox_modal('#thay-doi-mat-khau')"><i class="far fa-rotate me-2"></i>Thay
+                                đổi mật khẩu</a></li>
+                        <li><a class="dropdown-item" href="../login/dang-nhap.html"><i
+                                    class="far fa-power-off me-2"></i>Thoát</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="home my-5">
+
+            <section class="block content-block">
+                <div class="container-fluid">
+                    <h2 class="table-title fz-18 fw-bold text-uppercase my-3">PHÊ DUYỆT HỒ SƠ DỰ THẦU</h2>
+
+                    <div class="card mb-5">
+                        <div class="p-4 pb-0">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-6 col-6">
+                                    <div class="form-group mb-3">
+                                        <select name="" id="" class="form-control">
+                                            <option value="">Chọn dự án</option>
+                                            <option value="">Dự án 1</option>
+                                            <option value="">Dự án 2</option>
+                                            <option value="">Dự án 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-6 col-6">
+                                    <div class="form-group mb-3">
+                                        <select name="" id="" class="form-control">
+                                            <option value="">Chọn gói thấu</option>
+                                            <option value="">Gói thầu 1</option>
+                                            <option value="">Gói thầu 2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-6 col-6">
+                                    <div class="form-group mb-3">
+                                        <select name="" id="" class="form-control" onchange="showDateRange(this)">
+                                            <option value="">Chọn thời gian</option>
+                                            <option value="1">Một tuần gần nhất</option>
+                                            <option value="2">Một tháng gần nhất</option>
+                                            <option value="3">Sáu tháng gần nhất</option>
+                                            <option value="4">Một năm gần nhất</option>
+                                            <option value="5">Hai năm gần nhất</option>
+                                            <option value="6">Tuỳ chọn</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="date-range" class="col-lg-6 col-md-6 col-6" style="display: none;">
+                                    <div class="date-range">
+                                        <div class="form-group">
+                                            <label for="fromdate">Từ</label>
+                                            <input id="fromdate" type="text" class="form-control input-date datepicker"
+                                                placeholder="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="todate">Đến</label>
+                                            <input id="todate" type="text" class="form-control input-date datepicker"
+                                                placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-6 col-6">
+                                    <div class="form-group mb-3">
+                                        <select name="" id="" class="form-control">
+                                            <option value="">Chọn trạng thái</option>
+                                            <option value="">Tất cả</option>
+                                            <option value="">Mới tạo</option>
+                                            <option value="">Chờ xử lý</option>
+                                            <option value="">Đang xử lý</option>
+                                            <option value="">Đã tiếp nhận hồ sơ</option>
+                                            <option value="">Không nhận hồ sơ</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="d-flex align-items-center justify-content-end">
+                                        <div class="table-filter d-flex align-items-center">
+                                            <div class="form-group form-search">
+                                                <input type="text" class="form-control" placeholder="Từ khoá tìm kiếm">
+                                                <i class="far fa-search"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 pt-0">
+                            <div class="table-responsive">
+                                <table class="table table-style table-bordered">
+                                    <thead class="thead-light text-center">
+                                        <tr>
+                                            <th width="1%">STT</th>
+                                            <th width="5%">Mã dự án</th>
+                                            <th width="15%">Tên dự án</th>
+                                            <th width="8%">Mã gói thầu</th>
+                                            <th>Tên gói thầu</th>
+                                            <th width="15%">Đơn vị nộp hồ sơ</th>
+                                            <th width="10%">Thời gian cập nhập</th>
+                                            <th width="19%">Trạng thái phê duyệt</th>
+                                            <th width="50px"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">BD05.034</td>
+                                            <td>Dự án Bãi Dài</td>
+                                            <td class="text-center">BD.XL.001</td>
+                                            <td>Gói thầu xây dựng - Gia hạn đến ngày dd/mm/yy</td>
+                                            <td>Công ty Cổ phần Đầu tư Tổ hợp Thương mại Melinh Plaza Thanh Hóa</td>
+                                            <td class="text-center">17/7/2022 9h30</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img class="img-fluid me-3" src="../../assets/images/stt1.png"
+                                                        width="32px" height="32px" alt="File">
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">Hồ sơ đã được tiếp nhận chờ xử lý</option>
+                                                        <option value="">Hồ sơ đã được chuyển các bộ phần chuyên môn
+                                                        </option>
+                                                        <option value="">Hồ sơ đã chầm thầu - Trúng</option>
+                                                        <option value="">Hồ sơ đã chấm thầu - Trượt</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+
+                                            <td class="text-center">
+                                                <a href="javascript:;">
+                                                    <img class="img-fluid me-3" src="../../assets/images/load.svg"
+                                                        width="40px" height="40px" alt="Xem">
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">BD05.034</td>
+                                            <td>Dự án Bãi Dài</td>
+                                            <td class="text-center">BD.XL.001</td>
+                                            <td>Gói thầu xây dựng - Gia hạn đến ngày dd/mm/yy</td>
+                                            <td>Công ty Cổ phần Đầu tư Tổ hợp Thương mại Melinh Plaza Thanh Hóa</td>
+                                            <td class="text-center">17/7/2022 9h30</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img class="img-fluid me-3" src="../../assets/images/stt2.png"
+                                                        width="32px" height="32px" alt="File">
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">Hồ sơ đã được tiếp nhận chờ xử lý</option>
+                                                        <option value="" selected>Hồ sơ đã được chuyển các bộ phần
+                                                            chuyên môn
+                                                        </option>
+                                                        <option value="">Hồ sơ đã chầm thầu - Trúng</option>
+                                                        <option value="">Hồ sơ đã chấm thầu - Trượt</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+
+                                            <td class="text-center">
+                                                <a href="javascript:;">
+                                                    <img class="img-fluid me-3" src="../../assets/images/load.svg"
+                                                        width="40px" height="40px" alt="Xem">
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">BD05.034</td>
+                                            <td>Dự án Bãi Dài</td>
+                                            <td class="text-center">BD.XL.001</td>
+                                            <td>Gói thầu xây dựng - Gia hạn đến ngày dd/mm/yy</td>
+                                            <td>Công ty Cổ phần Đầu tư Tổ hợp Thương mại Melinh Plaza Thanh Hóa</td>
+                                            <td class="text-center">17/7/2022 9h30</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img class="img-fluid me-3" src="../../assets/images/stt3.png"
+                                                        width="32px" height="32px" alt="File">
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">Hồ sơ đã được tiếp nhận chờ xử lý</option>
+                                                        <option value="">Hồ sơ đã được chuyển các bộ phần chuyên môn
+                                                        </option>
+                                                        <option value="" selected>Hồ sơ đã chầm thầu - Trúng</option>
+                                                        <option value="">Hồ sơ đã chấm thầu - Trượt</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+
+                                            <td class="text-center">
+                                                <a href="javascript:;">
+                                                    <img class="img-fluid me-3" src="../../assets/images/load.svg"
+                                                        width="40px" height="40px" alt="Xem">
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="text-center">4</td>
+                                            <td class="text-center">BD05.034</td>
+                                            <td>Dự án Bãi Dài</td>
+                                            <td class="text-center">BD.XL.001</td>
+                                            <td>Gói thầu xây dựng - Gia hạn đến ngày dd/mm/yy</td>
+                                            <td>Công ty Cổ phần Đầu tư Tổ hợp Thương mại Melinh Plaza Thanh Hóa</td>
+                                            <td class="text-center">17/7/2022 9h30</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img class="img-fluid me-3" src="../../assets/images/stt4.png"
+                                                        width="32px" height="32px" alt="File">
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">Hồ sơ đã được tiếp nhận chờ xử lý</option>
+                                                        <option value="">Hồ sơ đã được chuyển các bộ phần chuyên môn
+                                                        </option>
+                                                        <option value="">Hồ sơ đã chầm thầu - Trúng</option>
+                                                        <option value="" selected>Hồ sơ đã chấm thầu - Trượt</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+
+                                            <td class="text-center">
+                                                <a href="javascript:;">
+                                                    <img class="img-fluid me-3" src="../../assets/images/load.svg"
+                                                        width="40px" height="40px" alt="Xem">
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <nav class="d-flex justify-content-end">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i
+                                        class="fa-solid fa-caret-left"></i></a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active" aria-current="page">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">...</a></li>
+                            <li class="page-item"><a class="page-link" href="#">20</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><i class="fa-solid fa-caret-right"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+
+
+
+            </section>
+
+        </main>
+
+
+
+        <div include-html="popup.html"></div>
+        <div include-html="alert.html"></div>
+
+        <script>
+            includeHTML();
+        </script>
+
+    </div>
+
+</body>
+
+</html>

@@ -10,7 +10,12 @@
 
 @media (max-width: 1024px) {}
 
-@media (max-width: 991px) {}
+@media (max-width: 991px) {
+    .bg-main {
+        height: auto;
+        min-height: calc(100vh - 70px);
+    }
+}
 
 @media (max-width: 767px) {
     .login-wrapper.s2 {
