@@ -1125,6 +1125,7 @@ select.form-control {
 
 .table-data tbody tr td {
   position: relative;
+  vertical-align: middle;
 }
 
 .table-data tbody tr td:nth-child(6n)::after,
