@@ -327,17 +327,15 @@
 
         <div class="avatar-upload text-center">
             <div class="input-file-container">
-                <input id="avatar" class="input-file" name="files" type="file">
-                <label for="avatar" class="input-file-avatar">
+                <input type="file" onchange="dragNdrop(event)" ondragover="drag()" ondrop="drop()" id="avatar" class="input-file">
+                <label for="avatar" id="input-file-avatar" class="input-file-avatar">
                     <img class="img" height="169px" width="169px" src="../../assets/images/avatar.svg" alt="Avatar">
                 </label>
             </div>
-            <div class="my-2">
-                <a href="" class="text-decoration-none">Xoá ảnh đại diện</a>
-            </div>
-            <p class="fz-32 fw-bold">Kéo ảnh đến màn hình này</p>
+            <div id="input-remove-avatar" class="my-2"></div>
+            <p class="fz-32 fw-bold mt-4">Kéo ảnh đến màn hình này</p>
             <p class="fz-24 fw-bold">- Hoặc -</p>
-            <a href="thong-bao.html" onclick="" class="btn btn-main">Tải lên từ máy tính</a>
+            <label for="avatar" class="btn btn-main">Tải lên từ máy tính</label>
 
         </div>
 

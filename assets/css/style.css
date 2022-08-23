@@ -758,7 +758,7 @@ select.form-control {
   background: transparent;
 }
 
-.login-inner{
+.login-inner {
   position: relative;
   padding: 100px 120px;
   margin: auto;
@@ -898,6 +898,7 @@ select.form-control {
 .header-top-left h2 {
   color: white;
   font-size: 32px;
+  line-height: normal;
   font-weight: bold;
   text-transform: capitalize;
   margin-bottom: 20px;
@@ -908,6 +909,7 @@ select.form-control {
   color: white;
   font-size: 32px;
   font-weight: bold;
+  line-height: normal;
 }
 
 .list-step {
@@ -1302,8 +1304,8 @@ ul.list-status li:not(:last-child) {
   left: 0;
   opacity: 0;
   cursor: pointer;
-  z-index: -1;
   width: 100%;
+  height: 100%;
 }
 
 .input-file-trigger {
@@ -1324,6 +1326,22 @@ ul.list-status li:not(:last-child) {
 .input-file-avatar {
   font-size: 170px;
   color: #f59a23;
+}
+
+.input-file-avatar img {
+  border-radius: 50%;
+  width: 169px;
+  height: 169px;
+  box-shadow: var(--shadow);
+}
+
+#input-remove-avatar {
+  position: relative;
+  z-index: 1;
+}
+
+#input-remove-avatar a:hover {
+  text-decoration: none;
 }
 
 .file-item {
@@ -1457,7 +1475,8 @@ ul.list-status li:not(:last-child) {
   border-radius: var(--radius-8);
   margin-bottom: 10px;
 }
-.comment .line h3{
+
+.comment .line h3 {
   color: #fff;
   font-weight: bold;
 }
@@ -1488,7 +1507,7 @@ ul.list-status li:not(:last-child) {
   right: 0;
 }
 
-.comment .line.customer::before, 
+.comment .line.customer::before,
 .comment .line.staff::before {
   content: '';
   position: absolute;
@@ -1512,7 +1531,7 @@ ul.list-status li:not(:last-child) {
   background-color: #79b64c;
 }
 
-.comment .line.customer::after, 
+.comment .line.customer::after,
 .comment .line.staff::after {
   content: '';
   position: absolute;
