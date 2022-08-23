@@ -749,8 +749,26 @@ select.form-control {
 }
 
 .login-wrapper.s2 {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.login-inner{
+  position: relative;
   padding: 100px 120px;
+  margin: auto;
+  width: 100%;
   max-width: 600px;
+  z-index: 111;
+  padding: 40px 40px 70px;
+  background: white;
+  border-radius: var(--radius-6);
+  box-shadow: var(--shadow);
 }
 
 .form-bottom {
