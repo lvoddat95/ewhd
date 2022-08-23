@@ -2,22 +2,23 @@
 
 @media only screen and (max-width: 1900px) and (min-width: 300px) {}
 
-@media (min-width: 1200px) {
-
-}
+@media (min-width: 1200px) {}
 
 @media (max-width: 1600px) {}
 
 @media (max-width: 1199px) {
-    td.cell-act{
+    td.cell-act {
         min-width: 150px;
     }
+
     td.cell-info {
         min-width: 270px;
     }
+
     td.cell-info-more {
         min-width: 270px;
     }
+
     td.cell-docs {
         min-width: 110px;
     }
@@ -79,12 +80,11 @@
 
     .list-step {
         font-size: 14px;
-        padding: 0 12px;
+        width: 100%;
     }
 
     .list-step li {
         width: calc(100%/4);
-        text-align: left;
         max-width: 80px;
     }
 
