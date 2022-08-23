@@ -18,9 +18,6 @@
 }
 
 @media (max-width: 767px) {
-    .login-wrapper.s2 {
-        padding: 70px 40px;
-    }
 }
 
 @media (max-width: 575px) {}
