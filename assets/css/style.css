@@ -194,10 +194,12 @@ Tags:
   font-display: swap;
 }
 
+
 @font-face {
-  font-family: 'Digital';
-  src: url('../fonts/Digital.ttf');
-  font-weight: normal;
+  font-family: 'Lora';
+  src: url('../fonts/Lora/Lora-Bold.ttf') format('truetype'), 
+  url('../fonts/OpenSans/Lora-Bold.eot#iefix') format('embedded-opentype'), url('../fonts/Lora/Lora-Bold.woff') format('woff');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -1550,3 +1552,24 @@ ul.list-status li:not(:last-child) {
 }
 
 /*.......... end timeline style ..........*/
+
+
+.countdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 20px;
+  border: 1px solid black;
+}
+.countdown .day, .countdown .hour, .countdown .min, .countdown .sec {
+  padding: 20px;
+  text-align: center;
+}
+.countdown .day .num, .countdown .hour .num, .countdown .min .num, .countdown .sec .num {
+  display: block;
+  font-size: 40px;
+}
+.countdown .day .word, .countdown .hour .word, .countdown .min .word, .countdown .sec .word {
+  display: block;
+  font-size: 20px;
+}

@@ -225,6 +225,7 @@ function includeHTML() {
 
 // UPload file
 $(document).ready(function () {
+
   function padTo2Digits(num) {
     return num.toString().padStart(2, "0");
   }
@@ -256,6 +257,17 @@ $(document).ready(function () {
   $("body").on("click", ".file-item__remove", function () {
     $(this).parent(".file-item").remove();
   });
+  
+  // Countdown
+
+  const myCountdown = new countdown({
+    target: '.countdown',
+    dayWord: ' days',
+    hourWord: ' hours',
+    minWord: ' mins',
+    secWord: ' seconds'
+  });
+
 });
 
 var dragNdrop = function (event) {
@@ -287,3 +299,5 @@ var drag = function () {
 var drop = function () {
   document.getElementById("avatar").parentNode.className = "dragBox";
 };
+
+

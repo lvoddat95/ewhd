@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../../assets/css/sweetalert2.min.css">
     <link rel="stylesheet" href="../../assets/css/hc-offcanvas-nav.css">
     <link rel="stylesheet" href="../../assets/css/fontawesome.min.css">
-    <link rel="stylesheet" href="../../assets/css/flipclock.css">
+
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/responsive.css">
 
@@ -34,9 +34,8 @@
     <script src="../../assets/js/select2.min.js"></script>
     <script src="../../assets/js/sweetalert2.min.js"></script>
     <script src="../../assets/js/hc-offcanvas-nav.js"></script>
-    <script src="../../assets/js/moment.min.js"></script>
-    <script src="../../assets/js/moment-timezone.min.js"></script>
-    <script src="../../assets/js/flipclock.min.js"></script>
+    <script src="../../assets/js/countdown.js"></script>
+
     <script src="../../assets/js/app.js"></script>
     <script src="../../assets/js/script.js"></script>
 
@@ -270,6 +269,30 @@
                                                         </div>
                                                         <img class="img-fluid" src="../../assets/images/flipclock.png"
                                                             width="140px" alt="">
+
+                                                        <div class="countdown" data-Date='2022/10/20 23:33:53'>
+                                                            <div class="running">
+                                                                <timer class="d-flex">
+                                                                    <div class="d-flex flex-column">
+                                                                        <span>Days</span>
+                                                                        <span class="days"></span>
+                                                                    </div>
+                                                                    <div class="d-flex flex-column">
+                                                                        <span>Hours</span>
+                                                                        <span class="hours"></span>
+                                                                    </div>
+                                                                    <div class="d-flex flex-column">
+                                                                        <span>Minutes</span>
+                                                                        <span class="minutes"></span>
+                                                                    </div>
+                                                                    <div class="d-flex flex-column">
+                                                                        <span>Seconds</span>
+                                                                        <span class="seconds"></span>
+                                                                    </div>
+                                                                </timer>
+
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </td>
@@ -534,7 +557,9 @@
 
                         </div>
                         <div class="tab-pane fade" id="nav-khong-tham-gia" role="tabpanel"
-                            aria-labelledby="khong-tham-gia">...</div>
+                            aria-labelledby="khong-tham-gia">
+                            ...
+                        </div>
                     </div>
                 </div>
 
