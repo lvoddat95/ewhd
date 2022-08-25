@@ -258,15 +258,6 @@ $(document).ready(function () {
     $(this).parent(".file-item").remove();
   });
   
-  // Countdown
-
-  const myCountdown = new countdown({
-    target: '.countdown',
-    dayWord: ' days',
-    hourWord: ' hours',
-    minWord: ' mins',
-    secWord: ' seconds'
-  });
 
 });
 
