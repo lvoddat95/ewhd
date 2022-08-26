@@ -44,9 +44,9 @@ $(function () {
     On this way, the "ended" class will be visible when the countdown is ready and you have a lot of 
     control over the content and the layout.
 
-    *** TIMER Mode ***
+    *** div Mode ***
 
-    On the timer mode, you have to enter the data in JSON format such in this example
+    On the div mode, you have to enter the data in JSON format such in this example
 
         <div class="countdown simple-bar fix" data-fixTime = '{"Days": "3", "Hours": "2", "Minutes": "10"}' data-endText="Offer ended">
             (days) p_days, (hours) p_hours, (minutes) p_minutes and (seconds) p_seconds left!
@@ -110,8 +110,8 @@ $(function () {
         if (fixTime != undefined) date = getFixDate(fixTime);
 
         //get init text with or whitout an extra Class
-        if ($('.' + extraClass + ' ' + runningClass + ' timer').length) {
-            initText = $('.' + extraClass + ' ' + runningClass + ' timer').text();
+        if ($('.' + extraClass + ' ' + runningClass + ' div').length) {
+            initText = $('.' + extraClass + ' ' + runningClass + ' div').text();
         } else {
             initText = $(this).text();
         }
@@ -151,11 +151,11 @@ $(function () {
             //replace text with or without extra class
 
             //whith extras Class
-            if ($('.' + extraClass + ' ' + runningClass + ' timer').length) {
-                $('.' + extraClass + ' ' + runningClass + ' timer .days').text(dif[0]);
-                $('.' + extraClass + ' ' + runningClass + ' timer .hours').text(dif[1]);
-                $('.' + extraClass + ' ' + runningClass + ' timer .minutes').text(dif[2]);
-                $('.' + extraClass + ' ' + runningClass + ' timer .seconds').text(dif[3]);
+            if ($('.' + extraClass + ' ' + runningClass + ' div').length) {
+                $('.' + extraClass + ' ' + runningClass + ' div .days').text(dif[0]);
+                $('.' + extraClass + ' ' + runningClass + ' div .hours').text(dif[1]);
+                $('.' + extraClass + ' ' + runningClass + ' div .minutes').text(dif[2]);
+                $('.' + extraClass + ' ' + runningClass + ' div .seconds').text(dif[3]);
 
             } else {
 
