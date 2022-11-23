@@ -20,8 +20,8 @@
     <link rel="stylesheet" href="../../assets/css/sweetalert2.min.css">
     <link rel="stylesheet" href="../../assets/css/hc-offcanvas-nav.css">
     <link rel="stylesheet" href="../../assets/css/fontawesome.min.css">
-    
-        <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/responsive.css">
 
     <script src="../../assets/js/jquery.min.js"></script>
@@ -92,67 +92,71 @@
                     <div class="card mb-5">
                         <div class="p-4 pb-0">
                             <div class="row">
-                                <div class="col-lg-2 col-md-6 col-6">
-                                    <div class="form-group mb-3">
-                                        <select name="" id="" class="form-control">
-                                            <option value="">Chọn dự án</option>
-                                            <option value="">Dự án 1</option>
-                                            <option value="">Dự án 2</option>
-                                            <option value="">Dự án 3</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-md-6 col-6">
-                                    <div class="form-group mb-3">
-                                        <select name="" id="" class="form-control">
-                                            <option value="">Chọn gói thấu</option>
-                                            <option value="">Gói thầu 1</option>
-                                            <option value="">Gói thầu 2</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-md-6 col-6">
-                                    <div class="form-group mb-3">
-                                        <select name="" id="" class="form-control" onchange="showDateRange(this)">
-                                            <option value="">Chọn thời gian</option>
-                                            <option value="1">Một tuần gần nhất</option>
-                                            <option value="2">Một tháng gần nhất</option>
-                                            <option value="3">Sáu tháng gần nhất</option>
-                                            <option value="4">Một năm gần nhất</option>
-                                            <option value="5">Hai năm gần nhất</option>
-                                            <option value="6">Tuỳ chọn</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div id="date-range" class="col-lg-6 col-md-6 col-6" style="display: none;">
-                                    <div class="date-range">
-                                        <div class="form-group">
-                                            <label for="fromdate">Từ</label>
-                                            <input id="fromdate" type="text" class="form-control input-date datepicker"
-                                                placeholder="">
+                                <div class="col-lg-10">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-6 col-6">
+                                            <div class="form-group mb-3">
+                                                <select name="" id="" class="form-control">
+                                                    <option value="">Chọn dự án</option>
+                                                    <option value="">Dự án 1</option>
+                                                    <option value="">Dự án 2</option>
+                                                    <option value="">Dự án 3</option>
+                                                </select>
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="todate">Đến</label>
-                                            <input id="todate" type="text" class="form-control input-date datepicker"
-                                                placeholder="">
+                                        <div class="col-lg-2 col-md-6 col-6">
+                                            <div class="form-group mb-3">
+                                                <select name="" id="" class="form-control">
+                                                    <option value="">Chọn gói thấu</option>
+                                                    <option value="">Gói thầu 1</option>
+                                                    <option value="">Gói thầu 2</option>
+                                                </select>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-md-6 col-6">
-                                    <div class="form-group mb-3">
-                                        <select name="" id="" class="form-control">
-                                            <option value="">Chọn trạng thái</option>
-                                            <option value="">Tất cả</option>
-                                            <option value="">Mới tạo</option>
-                                            <option value="">Chờ xử lý</option>
-                                            <option value="">Đang xử lý</option>
-                                            <option value="">Đã tiếp nhận hồ sơ</option>
-                                            <option value="">Không nhận hồ sơ</option>
-                                        </select>
+                                        <div class="col-lg-2 col-md-6 col-6">
+                                            <div class="form-group mb-3">
+                                                <select name="" id="" class="form-control"
+                                                    onchange="showDateRange(this)">
+                                                    <option value="">Chọn thời gian</option>
+                                                    <option value="1">Một tuần gần nhất</option>
+                                                    <option value="2">Một tháng gần nhất</option>
+                                                    <option value="3">Sáu tháng gần nhất</option>
+                                                    <option value="4">Một năm gần nhất</option>
+                                                    <option value="5">Hai năm gần nhất</option>
+                                                    <option value="6">Tuỳ chọn</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div id="date-range" class="col-lg-3 col-md-6 col-6" style="display: none;">
+                                            <div class="date-range">
+                                                <div class="form-group">
+                                                    <input id="fromdate" type="text"
+                                                        class="form-control input-date datepicker" placeholder="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="todate">Đến</label>
+                                                    <input id="todate" type="text"
+                                                        class="form-control input-date datepicker" placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-6 col-6">
+                                            <div class="form-group mb-3">
+                                                <select name="" id="" class="form-control">
+                                                    <option value="">Chọn trạng thái</option>
+                                                    <option value="">Tất cả</option>
+                                                    <option value="">Mới tạo</option>
+                                                    <option value="">Chờ xử lý</option>
+                                                    <option value="">Đang xử lý</option>
+                                                    <option value="">Đã tiếp nhận hồ sơ</option>
+                                                    <option value="">Không nhận hồ sơ</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4">
+                                <div class="col-lg-2">
                                     <div class="d-flex align-items-center justify-content-end">
                                         <div class="table-filter d-flex align-items-center">
                                             <div class="form-group form-search">
