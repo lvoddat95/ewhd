@@ -1,0 +1,14 @@
+{
+    "name": "datlv/ewhd",
+    "description": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dat Lv",
+            "email": "lvoddat95@yahoo.com"
+        }
+    ],
+    "require": {
+        "filp/whoops": "^2.14"
+    }
+}
